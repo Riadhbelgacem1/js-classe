@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>main</title>
+</head>
+<body>  
+    <h2 id="id0">hello world</h2>
+    <div id="id1"> 
+        <p>
+            Google
+            <img src="photo_mini.jpg"></img>
+            <input type="text" id="c1" class="c">
+            <button>search</button>
+            <p id="id3">0</p>
+            <form>
+                <p>Test de la fonction <b>carre</b>:</p>
+                <input type="text" id="resultat" size="25"/>
+                <input type="button" name="carre" value="Carre" onclick="carre('resultat')"/>
+            </form>
+            <input type="button" value="ouvrir" onclick="ouvrirfenretre()"/>
+            <input type="button" value="fermer" onclick="fermerfenretre()"/>
+            <input type="button" value="deplacer" onclick="deplacerfenretre()"/>
+    </div>
+    <script src="./index2.js"></script>
+    <script>
+        function ouvrirfenretre(){
+            fenetre=window.open(",",'width=400,height=200')
+            fenetre.document.write("<h3>une nouvel fenetre est cree </h3>")
+            fenetre.document.write("<a href=''> un lien est cree<a/>")
+            fenetre.focus();
+        }
+        function fermerfenretre(){
+            fenetre.close();
+        }
+        function deplacerfenretre(){
+            fenetre.moveBy(-100,-200);
+            fenetre.focus();
+        }
+        function DateAujourdhui() {
+    var jours = new Array("Dimanche", "Lundi", "Mardi", "Mercredi", "Jeudi", "Vendredi", "Samedi");
+    var mois = new Array("Janvier", "Février", "Mars", "Avril", "Mai", "Juin", "Juillet", "Août", "Septembre", "Octobre", "Novembre", "Décembre");
+    var date = new Date();
+    return ("<h4>" + jours[date.getDay()] + ", "
+            + date.getDate() + " "
+            + mois[date.getMonth()] + ", "
+            + date.getFullYear() + "</h4>");
+}
+
+</script>
+</head>
+<body>
+<script language="JavaScript">
+document.write(DateAujourdhui());
+        function carre(idresultat) {
+            var valeur = document.getElementById(idresultat).value;
+            valeur = valeur * valeur;
+            document.getElementById(idresultat).value = valeur;
+        }
+        
+    </script>
+</body>
+</html>

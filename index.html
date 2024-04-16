@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>main</title>
+</head>
+<body>  
+    <h2 id="id0">hello world</h2>
+    <div id="id1"> 
+        <p>
+            Google
+            <img src="photo_mini.jpg"></img>
+            <input type="text" id="c1" class="c">
+            <button>search</button>
+            <p id="id3">0</p>
+            <form>
+                <p>Test de la fonction <b>carre</b>:</p>
+                <input type="text" id="resultat" size="25"/>
+                <input type="button" name="carre" value="Carre" onclick="carre('resultat')"/>
+            </form>
+    </div>
+    <script language="javascript" src="./index1.js"></script>
+    <script>
+        function carre(idresultat) {
+            var valeur = document.getElementById(idresultat).value;
+            valeur = valeur * valeur;
+            document.getElementById(idresultat).value = valeur;
+        }
+    </script>
+</body>
+</html>
